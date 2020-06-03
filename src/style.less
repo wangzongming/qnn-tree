@@ -1,0 +1,141 @@
+.treeContainer {
+    // position: relative;
+    height: 100%; 
+    padding-right: 10px;
+    .valueCon {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 6px 10px;
+        box-sizing: border-box;
+    }
+    .valueConPc { 
+        padding: 6px 1px; 
+    }
+    .noData {
+        padding: 16px;
+        font-size: 18px;
+        color: #777;
+    }
+    .searchContainer{
+        position: absolute;
+        top: 0px;
+        left: 0px;right: 30px;
+        z-index: 2;
+    }
+}
+
+.myDrawerBySelectTip {
+    :global {
+        .ant-drawer-body {
+            padding: 0;
+        }
+    }
+    .selectedValue {
+        line-height: 35px;
+        padding: 0 8px;
+        // color: #666;
+        font-size: 16px;
+    }
+}
+.myDrawer.myDrawerByPc {
+    .con {
+        overflow-y: hidden;
+    }
+    .con:hover {
+        overflow-y: scroll;
+    }
+}
+.commonContainer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.myDrawer {
+    height: 100vh;
+    box-sizing: border-box;
+    :global {
+        .ant-drawer-body {
+            padding: 0;
+            height: 100%;
+            .TreeDom {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        .ant-tree li .ant-tree-node-content-wrapper {
+            width: 100%;
+            .ant-tree-title {
+                font-size: 15px;
+            }
+        }
+
+        .ant-tree li {
+            padding: 5px;
+        }
+        .ant-tree-checkbox-inner {
+            width: 22px;
+            height: 22px;
+            &:after {
+                left: 4.571429px;
+                top: 8.142857px;
+                width: 7.714286px;
+                height: 13.142857px;
+            }
+        }
+    }
+
+    .btns {
+        flex-basis: 50px;
+        box-shadow: -2px -0px 8px rgb(235, 235, 235);
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        box-sizing: border-box;
+        
+        :global {
+            button {
+                height: 39px;
+                // line-height: 39px;
+                flex: 1;
+            }
+        }
+    }
+    .con {
+        flex: 1;
+        transform: translate3d(0, 0, 0);
+        -webkit-overflow-scrolling: touch;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        position: relative;
+    }
+}
+
+.onRightClickDom {
+    position: absolute;
+    z-index: 10;
+    padding: 8px;
+    box-sizing: border-box;
+    width: 170px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(153, 153, 153, 0.6);
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    font-size: 13px;
+    color: #888;
+    display: none;
+    transition: 0.6s;
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+    ul li {
+        list-style: none;
+        margin: 6px;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.85;
+            color: #333;
+        }
+    }
+}
